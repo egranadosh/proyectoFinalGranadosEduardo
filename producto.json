@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "nombre": "Atrevia",
+        "precio": 100,
+        "img":"./img/atrevia.png",
+        "cantidad":1
+    },
+    {
+        "id": 2,
+        "nombre": "Atrevia One",
+        "precio": 50,
+        "img":"./img/atreviaone.png",
+        "cantidad":1
+    },
+    {
+        "id": 3,
+        "nombre": "Bravecto",
+        "precio": 80,
+        "img":"./img/bravecto2.png",
+        "cantidad":1
+    },
+    {
+        "id": 4,
+        "nombre": "CaniTabs",
+        "precio": 150,
+        "img":"./img/CaniTabs.png",
+        "cantidad":1
+    },
+    {
+        "id": 5,
+        "nombre": "Fipronex Duo",
+        "precio": 200,
+        "img":"./img/FipronexDuo.png",
+        "cantidad":1
+    },
+    {
+        "id": 6,
+        "nombre": "Mirrapel",
+        "precio": 30,
+        "img":"./img/mirrapel.png",
+        "cantidad":1
+    },
+    {
+        "id": 7,
+        "nombre": "Nexgard",
+        "precio": 70,
+        "img":"./img/Nexgard.png",
+        "cantidad":1
+    },
+    {
+        "id": 8,
+        "nombre": "Simparica",
+        "precio": 120,
+        "img":"./img/Simparica.png",
+        "cantidad":1
+    }
+]
