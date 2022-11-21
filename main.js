@@ -23,6 +23,15 @@ fetch(apiProductos)
       const boton = document.getElementById(`boton${producto.id}`);
       boton.addEventListener("click", () => {
         agregarAlCarrito(producto.id);
+        Toastify({
+          text: "¡Producto agregado con éxito!",
+          duration: 1000,
+          gravity: "bottom",
+          position:"right",
+          style: {
+            background: "linear-gradient(to right, #85bb65, #66b366)",
+          },
+        }).showToast();
       });
 
       //funcion agregar al carrito
@@ -50,18 +59,14 @@ fetch(apiProductos)
 let carrito = [];
 
 /* CARGAR CARRITO DESDE EL LOCALSTORAGE */
-
 //Si hay algo en el localStorage, cargamos el carrito.
 if (localStorage.getItem("carrito")) {
   carrito = JSON.parse(localStorage.getItem("carrito"));
 }
 
 //MOSTRAR EL CARRITO DE COMPRAS:
-
 const contenedorCarrito = document.getElementById("contenedorCarrito");
-
 const verCarrito = document.getElementById("verCarrito");
-
 verCarrito.addEventListener("click", () => {
   mostrarCarrito();
 });
@@ -73,7 +78,7 @@ const mostrarCarrito = () => {
     card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
     card.innerHTML = `
         <div class="card">
-            <img src="${producto.img}" class="card-img-top imgProductos" alt="${producto.nombre}">
+        <img src="${producto.img}" class="card-img-top imgProductos" alt="${producto.nombre}">
             <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
             <p class="card-text">Precio: ${producto.precio}</p>
@@ -149,8 +154,7 @@ comprar.addEventListener("click", () => {
         icon: "success",
         confirmButtonText: "Aceptar",
         confirmButtonColor: "B7950B",
-        backgroudn: "#FDEBD0",
-      })
+        })
         eliminarTodoElCarrito();
     }
 });
