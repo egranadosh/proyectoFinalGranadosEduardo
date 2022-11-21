@@ -132,15 +132,25 @@ const calcularTotal = () => {
 const comprar = document.getElementById("comprar");
 comprar.addEventListener("click", () => {
 
+
     let totalCompra = 0;
     carrito.forEach((producto) => {
       totalCompra += producto.precio * producto.cantidad;
     });
 
     if(totalCompra == 0){
-        alert("No tiene productos en el carrito!");
+        Swal.fire({
+          title: "No tiene productos en el carrito!",
+          icon: "error",
+        })
     } else {
-        alert("¡Muchas gracias por su compra!");
+      Swal.fire({
+        title: "¡Muchas gracias por su compra!",
+        icon: "success",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "B7950B",
+        backgroudn: "#FDEBD0",
+      })
         eliminarTodoElCarrito();
     }
 });
